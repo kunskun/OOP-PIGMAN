@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package oop.pigman;
-        
-import javax.swing.*;
-import java.awt.*;
-        
+
+
+import oop.pigman.Model.KeyModel;
 
 /**
  *
@@ -20,7 +19,9 @@ public class OOPPigMan {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new test();
+      //  new Display("test", 1000, 1000);
+
+        new KeyModel();
     }
     
 }
