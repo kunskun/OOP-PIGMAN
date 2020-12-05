@@ -12,8 +12,8 @@ public class Enemy extends Rectangle {
     private int dir = -1;
     public Random randomGen;
     private int time = 0;
-    private int targetTime = 60*4;
-    private int spd = 3;
+    private int targetTime = 60*3;
+    private int spd = 2;
     private int lastDir = -1;
 
     public Enemy(int x, int y){
@@ -82,9 +82,9 @@ public class Enemy extends Rectangle {
                     lastDir = down;
                 }
             }
-            if(y > Game.player.x){
+            if(y > Game.player.y){
                 if(canMove(x, y-spd)){
-                    x -= spd;
+                    y -= spd;
                     move = true;
                     lastDir = up;
                 }

@@ -30,15 +30,15 @@ public class Player extends Rectangle {
         if(level.apples.size() == 0){
             //Game end
             Game.player = new Player(0, 0);
-            Game.level = new Level("res/map/map5.png");
+            Game.level = new Level("res/map/map7.png");
             return;
 
         }
         for(int i=0; i < Game.level.enemies.size(); i++){
             Enemy en = Game.level.enemies.get(i);
-            if(en.intersects(this)){
-                System.exit(1);
-            }
+//            if(en.intersects(this)){
+//                System.exit(1);
+//            }
         }
 
     }

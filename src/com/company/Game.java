@@ -27,7 +27,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
         addKeyListener(this);
         player = new  Player(Game.WIDTH/2, Game.HEIGHT/2);
-        level = new Level("res/map/map7.png");
+        level = new Level("res/map/map9.png");
         spritesheet = new SpriteSheet("res/sprites/spritesheet.png");
 
         new Texture();
