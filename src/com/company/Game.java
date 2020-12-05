@@ -40,7 +40,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
         if(!isRunning) return;
         isRunning = false;
         try{
-            thread.join();
+            thread.join(); 
         } catch (InterruptedException e){
             e.printStackTrace();
         }
@@ -48,6 +48,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
     private void tick(){
         player.tick();
+        level.tick();
 
     }
 

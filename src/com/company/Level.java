@@ -20,6 +20,7 @@ public class Level {
 
     public Level(String path){
         apples = new ArrayList<>();
+        enemies = new ArrayList<>();
         try{
             //BufferedImage map = ImageIO.read(getClass().getResource("../res/map/map.png"));
 
@@ -44,6 +45,7 @@ public class Level {
                         Game.player.y = yy*32;
                     } else if(val == 0xFFff0000){
                         //Enemy
+                        enemies.add(new Enemy(xx*32, yy*32));
                     } else {
                         apples.add(new Apple(xx*32, yy*32));
                     }
@@ -56,7 +58,9 @@ public class Level {
     }
 
     public void tick(){
-
+        for(int i=0; i < enemies.size(); i++){
+            enemies.get(i).tick();
+        }
     }
 
     public void render(Graphics g){
@@ -69,6 +73,9 @@ public class Level {
 
             for(int i=0; i < apples.size(); i++){
                 apples.get(i).render(g);
+            }
+            for(int i=0; i < enemies.size(); i++){
+                enemies.get(i).render(g);
             }
         }
     }
