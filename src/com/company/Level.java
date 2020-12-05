@@ -13,11 +13,11 @@ public class Level {
     public int height;
     public Tile[][] tiles;
 
-    public Level(){
+    public Level(String path){
         try{
             //BufferedImage map = ImageIO.read(getClass().getResource("../res/map/map.png"));
-            File f = new File("map.png");
-            BufferedImage map =  ImageIO.read(new File("res/map/map.png"));
+
+            BufferedImage map =  ImageIO.read(new File(path));
             //ImageIO.write(map, "png", new File("map.png"));
             this.width = map.getWidth();
             this.height = map.getHeight();
