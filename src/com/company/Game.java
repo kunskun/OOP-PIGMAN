@@ -26,7 +26,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
         addKeyListener(this);
         player = new  Player(Game.WIDTH/2, Game.HEIGHT/2);
-        level = new Level("res/map/map3.png");
+        level = new Level("res/map/map5.png");
     }
 
     public synchronized void start(){
@@ -40,7 +40,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
         if(!isRunning) return;
         isRunning = false;
         try{
-            thread.join(); 
+            thread.join();
         } catch (InterruptedException e){
             e.printStackTrace();
         }
@@ -130,7 +130,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
         else if(e.getKeyCode() == KeyEvent.VK_LEFT) {player.left = true;}
         else if(e.getKeyCode() == KeyEvent.VK_UP) {player.up = true;}
         else if(e.getKeyCode() == KeyEvent.VK_DOWN) {player.down = true;}
-        System.out.println("Press");
+//        System.out.println("Press");
     }
 
     @Override
@@ -139,6 +139,6 @@ public class Game extends Canvas implements Runnable, KeyListener {
         else if(e.getKeyCode() == KeyEvent.VK_LEFT) {player.left = false;}
         else if(e.getKeyCode() == KeyEvent.VK_UP) {player.up = false;}
         else if(e.getKeyCode() == KeyEvent.VK_DOWN) {player.down = false;}
-        System.out.println("Release");
+//        System.out.println("Release");
     }
 }

@@ -35,6 +35,7 @@ public class Level {
             for(int xx=0; xx < width; xx++){
                 for(int yy=0; yy < height; yy++){
                     int val = pixels[xx+(yy*width)];
+                    System.out.println(val);
 
                     if(val == 0xFF000000){
                         //Tile
