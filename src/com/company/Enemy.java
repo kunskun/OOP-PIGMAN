@@ -13,7 +13,7 @@ public class Enemy extends Rectangle {
     public Random randomGen;
     private int time = 0;
     private int targetTime = 60*4;
-    private int spd = 4;
+    private int spd = 3;
     private int lastDir = -1;
 
     public Enemy(int x, int y){
