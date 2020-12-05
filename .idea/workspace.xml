@@ -50,19 +50,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.OOPPigMan" />
@@ -78,7 +65,9 @@
       <option name="presentableId" value="Default" />
       <updated>1606455346004</updated>
       <workItem from="1606455347418" duration="11111000" />
-      <workItem from="1606476285382" duration="8154000" />
+      <workItem from="1606476285382" duration="8431000" />
+      <workItem from="1606499762567" duration="862000" />
+      <workItem from="1607144823174" duration="518000" />
     </task>
     <servers />
   </component>
@@ -118,5 +107,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606477708626" />
+    <state x="685" y="170" key="new project wizard" timestamp="1607145339523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="170" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607145339523" />
   </component>
 </project>
