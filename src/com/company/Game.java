@@ -26,7 +26,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
         addKeyListener(this);
         player = new  Player(Game.WIDTH/2, Game.HEIGHT/2);
-        level = new Level("res/map/map.png");
+        level = new Level("res/map/map3.png");
     }
 
     public synchronized void start(){
