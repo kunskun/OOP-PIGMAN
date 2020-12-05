@@ -3,19 +3,26 @@ package com.company;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
+import javax.imageio.ImageIO;
 
 public class Level {
 
-    public int width, height;
+    public int width;
+    public int height;
     public Tile[][] tiles;
 
-    public Level(String path){
+    public Level(){
         try{
-            BufferedImage map = ImageIO.read(getClass().getResource(path));
+            //BufferedImage map = ImageIO.read(getClass().getResource("../res/map/map.png"));
+            File f = new File("map.png");
+            BufferedImage map =  ImageIO.read(new File("res/map/map.png"));
+            //ImageIO.write(map, "png", new File("map.png"));
             this.width = map.getWidth();
             this.height = map.getHeight();
             int[] pixels = new int[width*height];
+            tiles = new Tile[width][height];
             map.getRGB(0, 0, width, height, pixels, 0, width);
 
             for(int xx=0; xx < width; xx++){

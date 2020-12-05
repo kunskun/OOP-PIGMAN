@@ -26,7 +26,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
         addKeyListener(this);
         player = new  Player(Game.WIDTH/2, Game.HEIGHT/2);
-        level = new Level("../res/map/map.png");
+        level = new Level();
     }
 
     public synchronized void start(){
@@ -48,6 +48,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
     private void tick(){
         player.tick();
+
     }
 
     private void render(){
