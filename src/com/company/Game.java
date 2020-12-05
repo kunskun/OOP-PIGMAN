@@ -23,7 +23,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
         setMinimumSize(d);
         setMaximumSize(d);
 
-        addKeyListener(this);
+
         player = new  Player(Game.WIDTH/2, Game.HEIGHT/2);
     }
 
