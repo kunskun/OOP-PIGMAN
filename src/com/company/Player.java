@@ -18,6 +18,22 @@ public class Player extends Rectangle {
         else if(left && canMove(x-speed, y)) {x -= speed;}
         else if(up && canMove(x, y-speed)) {y -= speed;}
         else if(down && canMove(x, y+speed)) {y += speed;}
+
+        Level level = Game.level;
+
+        for(int i=0; i < level.apples.size(); i++){
+            if(this.intersects(level.apples.get(i))){
+                level.apples.remove(i);
+                break;
+            }
+        }
+        if(level.apples.size() == 0){
+            //Game end
+            Game.player = new Player(0, 0);
+            Game.level = new Level("res/map/map5.png");
+            return;
+
+        }
     }
 
     private boolean canMove(int nextx, int nexty){
@@ -39,8 +55,7 @@ public class Player extends Rectangle {
     }
 
     public void render(Graphics g){
-        g.setColor(Color.yellow);
-        g.fillRect(x, y, width, height);
+        g.drawImage(Texture.player, x, y, 32, 32, null);
     }
 
 
