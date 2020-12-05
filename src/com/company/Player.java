@@ -5,10 +5,8 @@ import java.awt.*;
 public class Player extends Rectangle {
 
     private static final long serialVersionUID = 1L;
-
     public boolean right, left, up, down;
     private int speed = 4;
-
     public Player(int x, int y){
         setBounds(x, y, 32, 32);
     }
@@ -29,17 +27,28 @@ public class Player extends Rectangle {
         }
         if(level.apples.size() == 0){
             //Game end
-            Game.player = new Player(0, 0);
-            Game.level = new Level("res/map/map7.png");
-            return;
-
+            if (Game.count == 0) {
+                Game.player = new Player(0, 0);
+                Game.level = new Level("res/map/map7.png");
+                Game.count++;
+                System.out.println(Game.count);
+                return;
+            }
+            else{
+                Game.STATE = Game.WIN_SCREEN;
+                return;
+            }
         }
         for(int i=0; i < Game.level.enemies.size(); i++){
             Enemy en = Game.level.enemies.get(i);
-//            if(en.intersects(this)){
+            if(en.intersects(this)){
 //                System.exit(1);
-//            }
+//                Game.STATE = Game.DIE_SCREEN;
+                return;
+
+            }
         }
+
 
     }
 
