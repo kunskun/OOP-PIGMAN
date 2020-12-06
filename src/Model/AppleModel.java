@@ -10,7 +10,8 @@ public class AppleModel extends Rectangle {
     }
 
     public void render(Graphics g){
-        g.setColor(Color.green);
-        g.fillRect(x, y, width, height);
+//        g.setColor(Color.green);
+//        g.fillRect(x, y, width, height);
+        g.drawImage(TextureModel.apple, x, y, 16, 16, null);
     }
 }

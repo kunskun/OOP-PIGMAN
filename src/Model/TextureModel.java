@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 public class TextureModel {
     public static SpriteSheetModel spritesheetAnimal, spritesheetTiger, spritesheetGround;
     public static BufferedImage[] playerLR, playerUD, tigerLR, tigerUD;
-    public static BufferedImage groundGlass1, groundGlass2;
+    public static BufferedImage groundGlass1, groundGlass2, apple, appleTree;
 
     public TextureModel(){
         spritesheetAnimal = new SpriteSheetModel("res/sprites/spritesheetAnimal.png");
@@ -36,5 +36,7 @@ public class TextureModel {
         //ground
         groundGlass1 = spritesheetGround.getSprite(0,0, 16, 16);
         groundGlass2 = spritesheetGround.getSprite(17,0, 16, 16);
+        appleTree = spritesheetGround.getSprite(17,17, 300, 300);
+        apple = spritesheetGround.getSprite(0, 17, 16, 16);
     }
 }

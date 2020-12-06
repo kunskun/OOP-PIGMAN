@@ -60,7 +60,7 @@ public class PlayerController extends Rectangle {
         for(int i=0; i < GameController.level.enemies.size(); i++){
             EnemyController en = GameController.level.enemies.get(i);
             if(en.intersects(this)){
-                System.exit(1);
+//                System.exit(1);
             }
         }
 
