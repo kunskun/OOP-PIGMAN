@@ -1,6 +1,8 @@
 package Controller;
 
+import Model.TextureModel;
 import View.AppleView;
+import View.GlassView;
 import View.TileView;
 
 
@@ -19,10 +21,12 @@ public class LevelController {
 
     public List<AppleView> apples;
     public List<EnemyController> enemies;
+    public List<GlassView> glass;
 
     public LevelController(String path) {
         apples = new ArrayList<>();
         enemies = new ArrayList<>();
+        glass = new ArrayList<>();
         try{
             //BufferedImage map = ImageIO.read(getClass().getResource("../res/map/map.png"));
 
@@ -54,6 +58,7 @@ public class LevelController {
                     }
                     else {
                         apples.add(new AppleView(xx*32, yy*32));
+                        glass.add(new GlassView(xx*32, yy*32));
                     }
                 }
             }
@@ -73,19 +78,29 @@ public class LevelController {
     }
 
     public void render(Graphics g){
+        for(int i=0; i < glass.size(); i++){
+            glass.get(i).render(g);
+
+        }
         for(int x=0; x < width; x++){
             for(int y=0; y < height; y++){
                 if(tiles[x][y] != null){
                     tiles[x][y].render(g);
+
                 }
             }
-
                 for(int i=0; i < apples.size(); i++){
                     apples.get(i).render(g);
+
                 }
                 for(int i=0; i < enemies.size(); i++){
                     enemies.get(i).render(g);
                 }
         }
     }
+
+//    public void renderGlass(Graphics g, int x, int y) {
+//        g.drawImage(TextureModel.groundGlass, x*32, y+32, 32, 32, null);
+//
+//    }
 }
