@@ -49,11 +49,22 @@ public class PlayerController extends Rectangle {
             }
         }
 
+
         if(level.apples.size() == 0){
             //Game end when you eat all apple
-            GameController.player = new PlayerController(0, 0);
-            GameController.level = new LevelController("res/map/map7.png");
-            return;
+            if (GameController.count == 0) {
+                GameController.player = new PlayerController(0, 0);
+                GameController.level = new LevelController("res/map/map7.png");
+                GameController.count++;
+                System.out.println(GameController.count);
+                return;
+            }
+            else{
+                GameController.STATE = GameController.WIN_SCREEN;
+                return;
+            }
+//            GameController.player = new PlayerController(0, 0);
+//            GameController.level = new LevelController("res/map/map7.png");
 
         }
 
