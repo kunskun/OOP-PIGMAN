@@ -67,10 +67,13 @@ public class GameController extends Canvas implements Runnable, KeyListener{
         }
 
         Graphics g = bs.getDrawGraphics();
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 0, GameController.WIDTH, GameController.HEIGHT);
-        player.render(g);
+//        g.setColor(Color.BLACK);
+        g.drawImage(TextureModel.groundGlass1,0,0, GameController.WIDTH, GameController.HEIGHT, null);
+        //g.fillRect(0, 0, GameController.WIDTH, GameController.HEIGHT);
+
+
         level.render(g);
+        player.render(g);
         g.dispose();
         bs.show();
     }

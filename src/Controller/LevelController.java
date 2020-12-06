@@ -78,10 +78,10 @@ public class LevelController {
     }
 
     public void render(Graphics g){
-        for(int i=0; i < glass.size(); i++){
-            glass.get(i).render(g);
-
-        }
+//        for(int i=0; i < glass.size(); i++){
+//            glass.get(i).render(g);
+//
+//        }
         for(int x=0; x < width; x++){
             for(int y=0; y < height; y++){
                 if(tiles[x][y] != null){

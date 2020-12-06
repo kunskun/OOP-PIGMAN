@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/View/GlassView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/LevelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/LevelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/PlayerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Model/TextureModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Model/TextureModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/View/TileView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/View/TileView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sprites/spritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/spritesheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sprites/spritesheetGround.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/spritesheetGround.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/TextureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TextureModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/GlassView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/GlassView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/TileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TileView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +102,7 @@
       <workItem from="1607153143796" duration="5465000" />
       <workItem from="1607245391205" duration="5666000" />
       <workItem from="1607255781143" duration="1434000" />
-      <workItem from="1607260444915" duration="8705000" />
+      <workItem from="1607260444915" duration="10373000" />
     </task>
     <servers />
   </component>
@@ -114,25 +114,25 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="590" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607250588697" />
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1607269682836">
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1607271461194">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607269682836" />
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
     <state width="1022" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1607269682836">
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1607271461194">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607269682836" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
     <state width="1022" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1607269682835">
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1607271461194">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607269682835" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
     <state width="1022" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1607269682836">
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1607271461194">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607269682836" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
     <state width="1022" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
   </component>
 </project>

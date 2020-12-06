@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 public class TextureModel {
     public static SpriteSheetModel spritesheet, spritesheetTiger, spritesheetGround;
     public static BufferedImage[] playerLR, playerUD;
-    public static BufferedImage ghost, groundGlass;
+    public static BufferedImage ghost, groundGlass1, groundGlass2;
 
     public TextureModel(){
         spritesheet = new SpriteSheetModel("res/sprites/spritesheet.png");
@@ -26,6 +26,7 @@ public class TextureModel {
         ghost = spritesheetTiger.getSprite(0, 0);
 
         //ground
-        groundGlass = spritesheetGround.getSprite(0,0);
+        groundGlass1 = spritesheetGround.getSprite(0,0);
+        groundGlass2 = spritesheetGround.getSprite(17,0);
     }
 }

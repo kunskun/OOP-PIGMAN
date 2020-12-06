@@ -10,6 +10,6 @@ public class GlassView extends Rectangle {
     }
 
     public void render(Graphics g){
-        g.drawImage(TextureModel.groundGlass, x, y, 32, 32, null);
+        g.drawImage(TextureModel.groundGlass1, x, y, 32, 32, null);
     }
 }
