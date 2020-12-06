@@ -7,6 +7,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
+import java.util.concurrent.TimeUnit;
 
 public class Game extends Canvas implements Runnable, KeyListener, MouseListener {
 
@@ -23,6 +24,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
     public static SetScreen screen;
     public static final int PAUSE_SCREEN = 0, GAME = 1, DIE_SCREEN = 2, WIN_SCREEN = 3;
     public static int STATE = -1;
+    public static Timer timer;
 
     public boolean isEnter = false;
 
@@ -67,6 +69,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
     private void tick() {
         if (STATE == GAME) {
             player.tick();
+            timer = new Timer();
             level.tick();
         } else if (STATE == PAUSE_SCREEN) {
 
@@ -155,7 +158,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
         stop();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 	// write your code here
         Game game = new Game();
         JFrame f = new JFrame();
@@ -169,6 +172,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
         f.setVisible(true);
 
         game.start();
+
     }
 
     @Override

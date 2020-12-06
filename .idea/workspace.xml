@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Timer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pig-man/com/company/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/com/company/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/com/company/Game.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +50,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -78,6 +67,8 @@
       <updated>1607145737603</updated>
       <workItem from="1607145738875" duration="6997000" />
       <workItem from="1607153143796" duration="5465000" />
+      <workItem from="1607248266829" duration="232000" />
+      <workItem from="1607259535907" duration="803000" />
     </task>
     <servers />
   </component>
@@ -94,6 +85,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
