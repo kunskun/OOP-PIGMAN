@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="" />
+    <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/EnemyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/LevelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PlayerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ResourceModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/SpriteSheetModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/TextureModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/AppleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TileView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/com/company/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/com/company/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SpriteSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Texture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tile.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prefinal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -34,7 +55,20 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Launcher" />
+      <module name="pig-man" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Game" />
       <module name="pig-man" />
@@ -45,21 +79,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Launcher" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -74,6 +107,8 @@
       <updated>1607145737603</updated>
       <workItem from="1607145738875" duration="6997000" />
       <workItem from="1607153143796" duration="5465000" />
+      <workItem from="1607245391205" duration="5666000" />
+      <workItem from="1607255781143" duration="1434000" />
     </task>
     <servers />
   </component>
@@ -81,21 +116,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1022" height="267" key="GridCell.Tab.0.bottom" timestamp="1607201570065">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="590" y="122" key="FileChooserDialogImpl" timestamp="1607250588697">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="590" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607250588697" />
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1607256810227">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607256810227" />
     <state width="1022" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1022" height="267" key="GridCell.Tab.0.center" timestamp="1607201570065">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1607256810226">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607256810226" />
     <state width="1022" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1022" height="267" key="GridCell.Tab.0.left" timestamp="1607201570065">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1607256810226">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607256810226" />
     <state width="1022" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1022" height="267" key="GridCell.Tab.0.right" timestamp="1607201570065">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1607256810227">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607256810227" />
     <state width="1022" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
   </component>
 </project>
