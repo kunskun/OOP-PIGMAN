@@ -15,7 +15,7 @@ public class SpriteSheetModel {
         }
     }
 
-    public BufferedImage getSprite(int xx, int yy){
+    public BufferedImage getSprite(int xx, int yy, int w, int h){
         return sheet.getSubimage(xx, yy, 16, 16);
     }
 }

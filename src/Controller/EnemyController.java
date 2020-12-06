@@ -14,9 +14,15 @@ public class EnemyController extends Rectangle {
     private int dir = -1;
     public Random randomGen;
     private int time = 0;
-    private int targetTime = 70*3;
+    private int targetTime = 60*3;
     private int spd = 2;
     private int lastDir = -1;
+
+    private int dirMove = 0;
+
+
+    private int timeMove, targetTimeMove = 10;
+    public  int imageIndex = 0;
 
     public EnemyController(int x, int y){
         randomGen = new Random();
@@ -29,24 +35,28 @@ public class EnemyController extends Rectangle {
             if(dir == right){
                 if(canMove(x+spd, y)){
                     x += spd;
+                    dirMove = 0;
                 } else {
                     dir = randomGen.nextInt(4);
                 }
             } else if(dir == left){
                 if(canMove(x-spd, y)){
                     x -= spd;
+                    dirMove = 1;
                 } else {
                     dir = randomGen.nextInt(4);
                 }
             } else if(dir == up){
                 if(canMove(x, y-spd)){
                     y -= spd;
+                    dirMove = 2;
                 } else {
                     dir = randomGen.nextInt(4);
                 }
             } else if(dir == down){
                 if(canMove(x, y+spd)){
                     y += spd;
+                    dirMove = 3;
                 } else {
                     dir = randomGen.nextInt(4);
                 }
@@ -68,6 +78,7 @@ public class EnemyController extends Rectangle {
                     x += spd;
                     move = true;
                     lastDir = right;
+                    dirMove = 0;
                 }
             }
             if(x > GameController.player.x){
@@ -75,6 +86,7 @@ public class EnemyController extends Rectangle {
                     x -= spd;
                     move = true;
                     lastDir = left;
+                    dirMove = 1;
                 }
             }
             if(y < GameController.player.y){
@@ -82,6 +94,7 @@ public class EnemyController extends Rectangle {
                     y += spd;
                     move = true;
                     lastDir = down;
+                    dirMove = 3;
                 }
             }
             if(y > GameController.player.y){
@@ -89,6 +102,7 @@ public class EnemyController extends Rectangle {
                     y -= spd;
                     move = true;
                     lastDir = up;
+                    dirMove = 2;
                 }
             }
 
@@ -112,6 +126,7 @@ public class EnemyController extends Rectangle {
                     if(canMove(x, y+spd)){
                         y += spd;
                         state = smart;
+
                     }
                 } else {
                     if(canMove(x, y-spd)){
@@ -121,6 +136,7 @@ public class EnemyController extends Rectangle {
                 }
                 if(canMove(x+spd, y)){
                     x += spd;
+                    dirMove = 0;
                 }
             } else if(lastDir == left){
                 if(y < GameController.player.y){
@@ -136,7 +152,9 @@ public class EnemyController extends Rectangle {
                 }
                 if(canMove(x-spd, y)){
                     x -= spd;
+                    dirMove = 1;
                 }
+
             } else if(lastDir == up){
                 if(x < GameController.player.x){
                     if(canMove(x+spd, y)){
@@ -151,7 +169,9 @@ public class EnemyController extends Rectangle {
                 }
                 if(canMove(x, y+spd)){
                     y += spd;
+                    dirMove = 3;
                 }
+
             } else if(lastDir == down){
                 if(x < GameController.player.x){
                     if(canMove(x+spd, y)){
@@ -166,6 +186,7 @@ public class EnemyController extends Rectangle {
                 }
                 if(canMove(x, y-spd)){
                     y -= spd;
+                    dirMove = 2;
                 }
             }
 
@@ -175,6 +196,11 @@ public class EnemyController extends Rectangle {
                 state = random;
                 time = 0;
             }
+        }
+        timeMove++;
+        if (timeMove == targetTimeMove) {
+            timeMove = 0;
+            imageIndex++;
         }
     }
 
@@ -199,6 +225,18 @@ public class EnemyController extends Rectangle {
     public void render(Graphics g){
 //        g.setColor(Color.RED);
 //        g.fillRect(x, y, 32, 32);
-        g.drawImage(TextureModel.ghost, x, y, width, height, null);
+        if (dirMove == right) {
+            g.drawImage(TextureModel.tigerLR[imageIndex%2], x, y, 32, 32, null);
+        }
+        else if (dirMove == left) {
+            g.drawImage(TextureModel.tigerLR[imageIndex%2], x+32, y, -32, 32, null);
+        }
+        else if (dirMove == up) {
+            g.drawImage(TextureModel.tigerUD[imageIndex%2], x, y, 32, 32, null);
+        }
+        else if (dirMove == down) {
+            g.drawImage(TextureModel.tigerUD[imageIndex%2], x, y+32, 32, -32, null);
+        }
+
     }
 }

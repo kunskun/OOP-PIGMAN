@@ -1,11 +1,11 @@
-package View;
+package Model;
 
 import java.awt.*;
 
-public class AppleView extends Rectangle {
+public class AppleModel extends Rectangle {
     private static final long serialVersionUID = 1L;
 
-    public AppleView(int x, int y) {
+    public AppleModel(int x, int y) {
         setBounds(x+10, y+8, 8, 8);
     }
 

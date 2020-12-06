@@ -3,16 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/EnemyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/EnemyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/LevelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/LevelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/PlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Model/ResourceModel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Model/TextureModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Model/TextureModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pig-man/View/TileView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/View/TileView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sprites/spritesheetGround.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/spritesheetGround.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/View/AppleView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/View/GlassView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/View/TileView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sprites/spritesheetAnimal.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/spritesheetAnimal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sprites/spritesheetGround.psd" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/spritesheetGround.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EnemyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EnemyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LevelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ResourceModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/SpriteSheetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SpriteSheetModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/TextureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TextureModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/GlassView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/GlassView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/TileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TileView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/AppleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AppleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/GlassView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/GlassModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TileModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,15 +79,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,7 +109,8 @@
       <workItem from="1607153143796" duration="5465000" />
       <workItem from="1607245391205" duration="5666000" />
       <workItem from="1607255781143" duration="1434000" />
-      <workItem from="1607260444915" duration="10373000" />
+      <workItem from="1607260444915" duration="12799000" />
+      <workItem from="1607274670809" duration="2832000" />
     </task>
     <servers />
   </component>
@@ -110,29 +118,49 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="551" y="312" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607275053198">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="551" y="312" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1607275053198" />
     <state x="590" y="122" key="FileChooserDialogImpl" timestamp="1607250588697">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="590" y="122" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607250588697" />
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1607271461194">
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1607277505661">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607277505661" />
     <state width="1022" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1607271461194">
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1607277505660">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607277505660" />
     <state width="1022" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1607271461194">
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1607277505660">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607277505660" />
     <state width="1022" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
-    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1607271461194">
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1607277505661">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607271461194" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607277505661" />
     <state width="1022" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607201570065" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1607275375413">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607275375413" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1607275375412">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1607275375412" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1607275375412">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1607275375412" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1607275375412">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1607275375412" />
   </component>
 </project>

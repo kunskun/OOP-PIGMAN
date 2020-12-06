@@ -1,9 +1,8 @@
 package Controller;
 
-import Model.TextureModel;
-import View.AppleView;
-import View.GlassView;
-import View.TileView;
+import Model.AppleModel;
+import Model.GlassModel;
+import Model.TileModel;
 
 
 import java.awt.*;
@@ -17,11 +16,11 @@ import javax.imageio.ImageIO;
 public class LevelController {
     public int width;
     public int height;
-    public TileView[][] tiles;
+    public TileModel[][] tiles;
 
-    public List<AppleView> apples;
+    public List<AppleModel> apples;
     public List<EnemyController> enemies;
-    public List<GlassView> glass;
+    public List<GlassModel> glass;
 
     public LevelController(String path) {
         apples = new ArrayList<>();
@@ -35,7 +34,7 @@ public class LevelController {
             this.width = map.getWidth();
             this.height = map.getHeight();
             int[] pixels = new int[width*height];
-            tiles = new TileView[width][height];
+            tiles = new TileModel[width][height];
             map.getRGB(0, 0, width, height, pixels, 0, width);
 
             for(int xx=0; xx < width; xx++){
@@ -45,7 +44,7 @@ public class LevelController {
 
                     if(val == 0xFF000000){
                         //Tile
-                        tiles[xx][yy] = new TileView(xx*32, yy*32);
+                        tiles[xx][yy] = new TileModel(xx*32, yy*32);
                     }
                     else if(val == 0xFF0000ff){
                         //Player
@@ -55,10 +54,11 @@ public class LevelController {
                     else if(val == 0xFFff0000){
 //                        //Enemy
                         enemies.add(new EnemyController(xx*32, yy*32));
+                        apples.add(new AppleModel(xx*32, yy*32));
                     }
                     else {
-                        apples.add(new AppleView(xx*32, yy*32));
-                        glass.add(new GlassView(xx*32, yy*32));
+                        apples.add(new AppleModel(xx*32, yy*32));
+                        glass.add(new GlassModel(xx*32, yy*32));
                     }
                 }
             }

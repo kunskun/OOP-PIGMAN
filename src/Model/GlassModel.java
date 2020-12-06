@@ -1,11 +1,11 @@
-package View;
+package Model;
 
 import Model.TextureModel;
 
 import java.awt.*;
 
-public class GlassView extends Rectangle {
-    public GlassView(int x, int y) {
+public class GlassModel extends Rectangle {
+    public GlassModel(int x, int y) {
         setBounds(x, y, 32, 32);
     }
 

@@ -1,13 +1,13 @@
-package View;
+package Model;
 
 import Model.TextureModel;
 
 import java.awt.*;
 
-public class TileView extends Rectangle {
+public class TileModel extends Rectangle {
     private static final long serialVersionUID = 1L;
 
-    public TileView(int x, int y){
+    public TileModel(int x, int y){
         setBounds(x, y, 32, 32);
 
     }
