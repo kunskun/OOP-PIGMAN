@@ -15,10 +15,12 @@ public class TextureModel {
         spritesheetTiger = new SpriteSheetModel("res/sprites/spritesheetTiger.png");
         spritesheetGround = new SpriteSheetModel("res/sprites/spritesheetGround.png");
 
+
         loadScreen = new SpriteSheetModel("res/load/load.jpg");
         losScreen = new SpriteSheetModel("res/load/los.png");
         winScreen = new SpriteSheetModel("res/load/jok.png");
         nextScreen = new SpriteSheetModel("res/load/jok.png");
+
 
 
         playerLR = new BufferedImage[2];

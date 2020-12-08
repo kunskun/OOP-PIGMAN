@@ -4,6 +4,7 @@ import Model.SpriteSheetModel;
 import Model.TextureModel;
 
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -127,9 +128,13 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         } else if(STATE == DIE_SCREEN) {
             //screen = new SetScreen("res/load/los.png");
             g.drawImage(TextureModel.imgLos, 0, 0, 640, 480, null);
+            g.setFont(new Font("Android Euclid", Font.BOLD, 24));
+            g.drawString("12", 300, 220);
         } else if(STATE == WIN_SCREEN){
             //screen = new SetScreen("res/load/jok.png");
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
+            g.setFont(new Font("TimesRoman", Font.PLAIN, 26));
+            g.drawString("1254896", 100, 100);
 
         } else if(STATE == LEVEL_PASSED){
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
