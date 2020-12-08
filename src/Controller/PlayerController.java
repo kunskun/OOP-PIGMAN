@@ -11,6 +11,7 @@ import static Controller.GameController.*;
 
 public class PlayerController extends Rectangle {
     private static final long serialVersionUID = 1L;
+    public int point=0;
 
     public boolean right, left, up, down;
     private int speed = 4;
@@ -58,6 +59,7 @@ public class PlayerController extends Rectangle {
         for(int i=0; i < level.apples.size(); i++){
             if(this.intersects(level.apples.get(i))){
                 level.apples.remove(i);
+                point++;
                 break;
             }
         }
@@ -92,8 +94,7 @@ public class PlayerController extends Rectangle {
                 r1.suspend();
                 new soundModel("res/sound/lose.wav", false).start();
                 GameController.STATE = GameController.DIE_SCREEN;
-                new SaveScore("12:15:45");
-
+                new SaveScore(tm.getLastTime());
                 tm.setZero();
 
             }

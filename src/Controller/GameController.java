@@ -27,7 +27,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
     public static SpriteSheetModel spritesheet;
     public static final int PAUSE_SCREEN = 0, GAME = 1, DIE_SCREEN = 2, WIN_SCREEN = 3, LEVEL_PASSED = 4;
     public static int STATE = -1;
-    public static Timer tm = new Timer();
+
     public boolean isEnter = false;
 
     private int time = 0;
@@ -39,10 +39,12 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
 
     public static int sec = 0;
 
-
+    public static Timer tm = new Timer();
     public static  Thread r1 = new Thread(tm);
 
     public static boolean begin = true;
+
+
 
     public GameController(){
 
@@ -140,26 +142,29 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         //g.fillRect(0, 0, GameController.WIDTH, GameController.HEIGHT);
         if(STATE == GAME) {
             player.render(g);
-
             level.render(g);
+            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
+            g.setColor(new Color(1f,0f,0f,.8f ));
+            g.drawString(Integer.toString(player.point), 120, 25);
+            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
+            g.drawString(tm.check(), 20, 25);
         } else if(STATE == PAUSE_SCREEN){
             //screen = new SpriteSheetModel("res/load/load.jpg");
             g.drawImage(TextureModel.imgLoad, 0, 0, 640, 480, null);
         } else if(STATE == DIE_SCREEN) {
             //screen = new SetScreen("res/load/los.png");
             g.drawImage(TextureModel.imgLos, 0, 0, 640, 480, null);
-            g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
-            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.drawString("12", 310, 220);
-            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.drawString(new GetScore().getScore(), 310, 260);
+//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
+//            g.drawString(Integer.toString(player.point), 310, 220);
+//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
+//            g.drawString(tm.getLastTime(), 310, 260);
         } else if(STATE == WIN_SCREEN){
             //screen = new SetScreen("res/load/jok.png");
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
             g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.drawString("12", 310, 220);
+            g.drawString(Integer.toString(player.point), 310, 220);
             g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.drawString(new GetScore().getScore(), 310, 260);
+            g.drawString(tm.getLastTime(), 310, 260);
 
         } else if(STATE == LEVEL_PASSED){
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
