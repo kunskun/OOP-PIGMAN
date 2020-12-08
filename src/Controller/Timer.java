@@ -12,13 +12,12 @@ public class Timer extends JLabel implements Runnable{
     @Override
     public void run(){
         while(true){
-            Calendar d = Calendar.getInstance();
-            int sec = d.get(Calendar.SECOND);
+
             setText(check(sec));
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
-                Logger.getLogger(Timer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(RunClock.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
@@ -33,15 +32,6 @@ public class Timer extends JLabel implements Runnable{
 
     }
 
-    public String checkNum(int num){
-        String nums = num+"";
-        if(nums.length() != 2){
-            return ("0"+nums);
-        } else {
-            return nums;
-        }
-    }
-}
 
 
 
