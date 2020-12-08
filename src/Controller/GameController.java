@@ -42,6 +42,9 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
     public static Timer tm = new Timer();
     public static  Thread r1 = new Thread(tm);
 
+    public int targetTime = 10;
+    public int imageIndex=0;
+
     public static boolean begin = true;
 
 
@@ -70,6 +73,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         spritesheet = new SpriteSheetModel("res/sprites/spritesheet.png");
         soundBG = new soundModel("res/sound/BGsound.wav", true);
         new TextureModel();
+
     }
 
     public synchronized void start(){
@@ -130,6 +134,12 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
     }
 
     private void render(){
+        time++;
+        if (time == targetTime) {
+            time = 0;
+            imageIndex++;
+        }
+
         BufferStrategy bs = getBufferStrategy();
         if(bs  == null){
             createBufferStrategy(3);
@@ -137,9 +147,11 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         }
 
         Graphics g = bs.getDrawGraphics();
+        
 //        g.setColor(Color.BLACK);
         g.drawImage(TextureModel.groundGlass1,0,0, GameController.WIDTH, GameController.HEIGHT, null);
         //g.fillRect(0, 0, GameController.WIDTH, GameController.HEIGHT);
+
         if(STATE == GAME) {
             player.render(g);
             level.render(g);
@@ -148,6 +160,8 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
             g.drawString(Integer.toString(player.point), 120, 25);
             g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
             g.drawString(tm.check(), 20, 25);
+
+
         } else if(STATE == PAUSE_SCREEN){
             //screen = new SpriteSheetModel("res/load/load.jpg");
             g.drawImage(TextureModel.imgLoad, 0, 0, 640, 480, null);
@@ -166,8 +180,17 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
             g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
             g.drawString(tm.getLastTime(), 340, 279);
 
+            //draw animation pig
+            g.drawImage(TextureModel.playerLR[imageIndex%2], 280, 350, 100, 100, null);
+
         } else if(STATE == LEVEL_PASSED){
-            g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
+
+            g.drawImage(TextureModel.imgNext, 0, 0, 640, 480, null);
+            System.out.println(imageIndex);
+
+            g.drawImage(TextureModel.playerLR[imageIndex%2], 270, 300, 100, 100, null);
+
+
 
         }
 
