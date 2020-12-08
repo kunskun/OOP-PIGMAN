@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
+    <list default="true" id="746da521-d49d-4356-83aa-6bf3fa9087e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/PlayerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/PlayerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Model/soundModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Model/soundModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/TextureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TextureModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/soundModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/soundModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,13 +66,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,5 +127,23 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom" timestamp="1607446589555">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607446589555" />
+    <state width="1493" height="112" key="GridCell.Tab.0.center" timestamp="1607446589555">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607446589555" />
+    <state width="1493" height="112" key="GridCell.Tab.0.left" timestamp="1607446589555">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607446589555" />
+    <state width="1493" height="112" key="GridCell.Tab.0.right" timestamp="1607446589555">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="112" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607446589555" />
   </component>
 </project>

@@ -2,9 +2,12 @@ package Controller;
 
 import Model.SaveScore;
 import Model.TextureModel;
+import Model.soundModel;
 
 
 import java.awt.*;
+
+import static Controller.GameController.soundBG;
 
 public class PlayerController extends Rectangle {
     private static final long serialVersionUID = 1L;
@@ -19,6 +22,7 @@ public class PlayerController extends Rectangle {
     private int lastDir = 1;
 
     public PlayerController(int x, int y){
+        soundBG.start();
         setBounds(x, y, 32, 32);
     }
 
@@ -55,12 +59,16 @@ public class PlayerController extends Rectangle {
             //Game end when you eat all apple is
             // count is use for change level
             if (GameController.count == 0) {
+                soundBG.stop();
+                new soundModel("res/sound/win.wav", false).start();
                 GameController.count++;
                 System.out.println(GameController.count);
                 GameController.STATE = GameController.LEVEL_PASSED;
                 return;
             }
             else{
+                soundBG.stop();
+                new soundModel("res/sound/win.wav", false).start();
                 GameController.STATE = GameController.WIN_SCREEN;
                 return;
             }
@@ -72,7 +80,9 @@ public class PlayerController extends Rectangle {
         for(int i=0; i < GameController.level.enemies.size(); i++){
             EnemyController en = GameController.level.enemies.get(i);
             if(en.intersects(this)){
-                GameController.STATE = GameController.DIE_SCREEN;
+                soundBG.stop();
+                new soundModel("res/sound/lose.wav", false).start();
+                //GameController.STATE = GameController.DIE_SCREEN;
                 new SaveScore("12:15:45");
 
             }
