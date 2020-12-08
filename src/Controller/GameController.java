@@ -144,7 +144,9 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
 
         while(isRunning){
             long now = System.nanoTime();
+
             delta += (now - lastTime) / ns;
+            //System.out.println(delta);
             lastTime = now;
 
             while (delta >= 1){
