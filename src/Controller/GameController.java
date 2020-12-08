@@ -48,6 +48,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
 
     public GameController(){
 
+
         //tm = new Timer();
         //Thread r1 = new Thread(tm);
 

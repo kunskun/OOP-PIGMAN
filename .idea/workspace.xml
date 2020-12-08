@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Launcher.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pig-man/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Launcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,13 +64,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,6 +108,7 @@
       <workItem from="1607364636107" duration="651000" />
       <workItem from="1607378420449" duration="29000" />
       <workItem from="1607425755227" duration="279000" />
+      <workItem from="1607460998784" duration="1467000" />
     </task>
     <servers />
   </component>
@@ -120,23 +126,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom" timestamp="1607458860699">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607458860699" />
-    <state width="1877" height="149" key="GridCell.Tab.0.center" timestamp="1607458860698">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607458860698" />
-    <state width="1877" height="149" key="GridCell.Tab.0.left" timestamp="1607458860698">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607458860698" />
-    <state width="1877" height="149" key="GridCell.Tab.0.right" timestamp="1607458860698">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607458860698" />
   </component>
 </project>
