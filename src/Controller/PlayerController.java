@@ -93,7 +93,9 @@ public class PlayerController extends Rectangle {
                 soundBG.stop();
                 r1.suspend();
                 new soundModel("res/sound/lose.wav", false).start();
-                GameController.STATE = GameController.DIE_SCREEN;
+                //GameController.STATE = GameController.DIE_SCREEN;
+                GameController.STATE = GameController.LEVEL_PASSED;
+                //GameController.STATE = GameController.WIN_SCREEN;
                 new SaveScore(tm.getLastTime());
                 tm.setZero();
 

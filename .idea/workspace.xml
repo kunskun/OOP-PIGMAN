@@ -7,6 +7,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Controller/GameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/pig-man/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pig-man/Launcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/TextureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/TextureModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
