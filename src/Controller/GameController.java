@@ -140,7 +140,6 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         //g.fillRect(0, 0, GameController.WIDTH, GameController.HEIGHT);
         if(STATE == GAME) {
             player.render(g);
-
             level.render(g);
         } else if(STATE == PAUSE_SCREEN){
             //screen = new SpriteSheetModel("res/load/load.jpg");

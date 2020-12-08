@@ -4,10 +4,6 @@
     <list default="true" id="f2e31e2b-883f-4754-8fcb-175a62a939e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Timer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/SaveScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SaveScore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
