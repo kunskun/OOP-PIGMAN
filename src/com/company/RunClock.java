@@ -2,6 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,23 +24,14 @@ public class RunClock extends JLabel implements Runnable{
         }
         private int pre = 0, hr = 0, min = 0, sec = 0;
         public String check(int num){
-            if(num != pre){
-                sec += 1;
-                if (sec < 60) {
-                    return (checkNum(hr)+" : "+checkNum(min)+" : "+checkNum(sec-1));
-                } else {
-                    min += 1; sec %= 60;
-                    if(min < 60){
-                        return (checkNum(hr)+" : "+checkNum(min)+" : "+checkNum(sec-1));
-                    } else {
-                        hr += 1;min %= 60; sec %= 60;
-                        return (checkNum(hr)+" : "+checkNum(min)+" : "+checkNum(sec-1));
-                    }
-                }
-            }
-            pre = num;
-            return (checkNum(hr)+" : "+checkNum(min%60)+" : "+checkNum((sec-1)%60));
+
+            sec += 1;
+
+            return (new DecimalFormat("00").format(Math.floor(sec/3600)%24)+" : "+new DecimalFormat("00").format(Math.floor(sec/60)%60)+" : "+new DecimalFormat("00").format(Math.floor(sec%60)));
+
+
         }
+
         public String checkNum(int num){
             String nums = num+"";
             if(nums.length() != 2){
