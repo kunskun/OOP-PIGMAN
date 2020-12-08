@@ -7,12 +7,12 @@ import java.io.InputStream;
 
 public class soundModel {
     InputStream input;
-    public soundModel(){
-        try (in) {
-
-        }
-        input = new FileInputStream(new File("res/sound/BGsound.mp3"));
-        AudioInputStream audio = new AudioInputStream(input);
-
-    }
+//    public soundModel(){
+//        try (in) {
+//
+//        }
+//        input = new FileInputStream(new File("res/sound/BGsound.mp3"));
+//        AudioInputStream audio = new AudioInputStream(input);
+//
+//    }
 }

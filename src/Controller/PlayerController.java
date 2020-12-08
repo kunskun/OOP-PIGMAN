@@ -51,12 +51,12 @@ public class PlayerController extends Rectangle {
 
 
         if(level.apples.size() == 0){
-            //Game end when you eat all apple
+            //Game end when you eat all apple is
+            // count is use for change level
             if (GameController.count == 0) {
-                GameController.player = new PlayerController(0, 0);
-                GameController.level = new LevelController("res/map/map7.png");
                 GameController.count++;
                 System.out.println(GameController.count);
+                GameController.STATE = GameController.LEVEL_PASSED;
                 return;
             }
             else{
@@ -71,7 +71,7 @@ public class PlayerController extends Rectangle {
         for(int i=0; i < GameController.level.enemies.size(); i++){
             EnemyController en = GameController.level.enemies.get(i);
             if(en.intersects(this)){
-                GameController.STATE = GameController.DIE_SCREEN;
+//                GameController.STATE = GameController.DIE_SCREEN;
 //                System.exit(1);
             }
         }

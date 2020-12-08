@@ -22,7 +22,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
     public static PlayerController player;
     public static LevelController level;
     public static SpriteSheetModel spritesheet;
-    public static final int PAUSE_SCREEN = 0, GAME = 1, DIE_SCREEN = 2, WIN_SCREEN = 3;
+    public static final int PAUSE_SCREEN = 0, GAME = 1, DIE_SCREEN = 2, WIN_SCREEN = 3, LEVEL_PASSED = 4;
     public static int STATE = -1;
 
     public boolean isEnter = false;
@@ -96,6 +96,13 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
                 level = new LevelController("res/map/map9.png");
                 STATE = GAME;
             }
+        } else if (STATE == LEVEL_PASSED){
+            if (isEnter) {
+                isEnter = false;
+                player = new PlayerController(GameController.WIDTH / 2, GameController.HEIGHT / 2);
+                level = new LevelController("res/map/map7.png");
+                STATE = GAME;
+            }
         }
 
     }
@@ -122,6 +129,9 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
             g.drawImage(TextureModel.imgLos, 0, 0, 640, 480, null);
         } else if(STATE == WIN_SCREEN){
             //screen = new SetScreen("res/load/jok.png");
+            g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
+
+        } else if(STATE == LEVEL_PASSED){
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
 
         }
@@ -199,6 +209,9 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
             isEnter = true;
         }
         if(STATE == WIN_SCREEN){
+            isEnter = true;
+        }
+        if(STATE == LEVEL_PASSED){
             isEnter = true;
         }
     }

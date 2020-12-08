@@ -6,7 +6,7 @@ import Model.SpriteSheetModel;
 import java.awt.image.BufferedImage;
 
 public class TextureModel {
-    public static SpriteSheetModel spritesheetAnimal, spritesheetTiger, spritesheetGround, loadScreen, losScreen, winScreen;
+    public static SpriteSheetModel spritesheetAnimal, spritesheetTiger, spritesheetGround, loadScreen, losScreen, winScreen, nextScreen;
     public static BufferedImage[] playerLR, playerUD, tigerLR, tigerUD;
     public static BufferedImage groundGlass1, groundGlass2, apple, appleTree, imgLoad, imgLos, imgWin;
 
@@ -18,6 +18,7 @@ public class TextureModel {
         loadScreen = new SpriteSheetModel("res/load/load.jpg");
         losScreen = new SpriteSheetModel("res/load/los.png");
         winScreen = new SpriteSheetModel("res/load/jok.png");
+        nextScreen = new SpriteSheetModel("res/load/jok.png");
 
 
         playerLR = new BufferedImage[2];
