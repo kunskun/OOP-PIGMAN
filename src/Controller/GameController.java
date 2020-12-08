@@ -154,17 +154,17 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         } else if(STATE == DIE_SCREEN) {
             //screen = new SetScreen("res/load/los.png");
             g.drawImage(TextureModel.imgLos, 0, 0, 640, 480, null);
-//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-//            g.drawString(Integer.toString(player.point), 310, 220);
-//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-//            g.drawString(tm.getLastTime(), 310, 260);
+//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
+//            g.drawString(tm.getLastTime(), 350, 245);
+//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
+//            g.drawString(tm.getLastTime(), 340, 279);
         } else if(STATE == WIN_SCREEN){
             //screen = new SetScreen("res/load/jok.png");
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
-            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.drawString(Integer.toString(player.point), 310, 220);
-            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.drawString(tm.getLastTime(), 310, 260);
+            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
+            g.drawString(tm.getLastTime(), 350, 245);
+            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
+            g.drawString(tm.getLastTime(), 340, 279);
 
         } else if(STATE == LEVEL_PASSED){
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
