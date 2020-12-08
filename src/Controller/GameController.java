@@ -3,6 +3,7 @@ package Controller;
 import Model.GetScore;
 import Model.SpriteSheetModel;
 import Model.TextureModel;
+import Model.soundModel;
 
 
 import javax.swing.*;
@@ -34,6 +35,8 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
     private boolean showText = true;
     public static int count = 0;
 
+    public static soundModel soundBG;
+
     public GameController(){
         Dimension d = new Dimension(GameController.WIDTH, GameController.HEIGHT);
         setPreferredSize(d);
@@ -49,7 +52,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
 //        player = new  PlayerController(GameController.WIDTH/2, GameController.HEIGHT/2);
 //        level = new LevelController("res/map/map9.png");
         spritesheet = new SpriteSheetModel("res/sprites/spritesheet.png");
-
+        soundBG = new soundModel("res/sound/BGsound.wav", true);
         new TextureModel();
     }
 

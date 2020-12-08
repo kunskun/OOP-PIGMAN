@@ -1,18 +1,44 @@
 package Model;
 
+
 import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.TargetDataLine;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.io.File;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 
 public class soundModel {
-    InputStream input;
-//    public soundModel(){
-//        try (in) {
-//
-//        }
-//        input = new FileInputStream(new File("res/sound/BGsound.mp3"));
-//        AudioInputStream audio = new AudioInputStream(input);
-//
-//    }
-}
+    public Clip clip;
+    public soundModel(String path, boolean loop){
+        try {
+            File file = new File(path);
+            AudioInputStream stream = AudioSystem.getAudioInputStream(file);
+            clip = AudioSystem.getClip();
+            clip.open(stream);
+            if (loop) {
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
+            }
+
+            // sleep to allow enough time for the clip to play
+            //Thread.sleep(500);
+
+            stream.close();
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    public void start(){
+        clip.start();
+    }
+    public void stop(){
+        clip.stop();
+    }
+
+    }
+
