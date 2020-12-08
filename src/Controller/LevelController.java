@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.imageio.ImageIO;
 
+import static Controller.GameController.r1;
+
 public class LevelController {
     public int width;
     public int height;
@@ -23,6 +25,7 @@ public class LevelController {
     public List<GlassModel> glass;
 
     public LevelController(String path) {
+
         apples = new ArrayList<>();
         enemies = new ArrayList<>();
         glass = new ArrayList<>();

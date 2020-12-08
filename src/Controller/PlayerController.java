@@ -7,7 +7,7 @@ import Model.soundModel;
 
 import java.awt.*;
 
-import static Controller.GameController.soundBG;
+import static Controller.GameController.*;
 
 public class PlayerController extends Rectangle {
     private static final long serialVersionUID = 1L;
@@ -22,6 +22,14 @@ public class PlayerController extends Rectangle {
     private int lastDir = 1;
 
     public PlayerController(int x, int y){
+        if (begin) {
+            begin = false;
+            r1.start();
+        } else {
+            r1.resume();
+        }
+
+        //r1.resume();
         soundBG.start();
         setBounds(x, y, 32, 32);
     }
@@ -81,9 +89,12 @@ public class PlayerController extends Rectangle {
             EnemyController en = GameController.level.enemies.get(i);
             if(en.intersects(this)){
                 soundBG.stop();
+                r1.suspend();
                 new soundModel("res/sound/lose.wav", false).start();
-                //GameController.STATE = GameController.DIE_SCREEN;
+                GameController.STATE = GameController.DIE_SCREEN;
                 new SaveScore("12:15:45");
+
+                tm.setZero();
 
             }
         }
@@ -115,6 +126,7 @@ public class PlayerController extends Rectangle {
     }
 
     public void render(Graphics g){
+
 //        g.setColor(Color.CYAN);
 //        g.fillRect(x, y, width, height);
         if (lastDir == 1) {

@@ -12,7 +12,7 @@ public class SaveScore {
             PrintWriter p = new PrintWriter(oout);
 //            System.out.println(p);
             p.println(time);
-            System.out.println("--->"+time);
+//            System.out.println("--->"+time);
         } catch(IOException e){
             System.out.println(e.toString());;
         }

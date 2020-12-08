@@ -9,28 +9,37 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Timer extends JLabel implements Runnable{
+    public static int sec = 0;
     @Override
-    public void run(){
-        while(true){
-
-            setText(check(sec));
+    public synchronized void run() {
+        while (true) {
             try {
                 Thread.sleep(1000);
+                System.out.println(check());
             } catch (InterruptedException ex) {
-                Logger.getLogger(RunClock.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Timer.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }
     }
-    private int pre = 0, hr = 0, min = 0, sec = 0;
-    public String check(int num){
+
+    public void setZero(){
+        sec = -1;
+    }
+
+    public String check() {
 
         sec += 1;
 
-        return (new DecimalFormat("00").format(Math.floor(sec/3600)%24)+" : "+new DecimalFormat("00").format(Math.floor(sec/60)%60)+" : "+new DecimalFormat("00").format(Math.floor(sec%60)));
+        return (new DecimalFormat("00").format(Math.floor(sec / 3600) % 24) + ":" + new DecimalFormat("00").format(Math.floor(sec / 60) % 60) + ":" + new DecimalFormat("00").format(Math.floor(sec % 60)));
 
 
     }
+
+    public String getTime(){
+        return String.valueOf(sec);
+    }
+}
 
 
 

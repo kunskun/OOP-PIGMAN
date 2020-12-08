@@ -27,7 +27,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
     public static SpriteSheetModel spritesheet;
     public static final int PAUSE_SCREEN = 0, GAME = 1, DIE_SCREEN = 2, WIN_SCREEN = 3, LEVEL_PASSED = 4;
     public static int STATE = -1;
-
+    public static Timer tm = new Timer();
     public boolean isEnter = false;
 
     private int time = 0;
@@ -37,7 +37,21 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
 
     public static soundModel soundBG;
 
+    public static int sec = 0;
+
+
+    public static  Thread r1 = new Thread(tm);
+
+    public static boolean begin = true;
+
     public GameController(){
+
+        //tm = new Timer();
+        //Thread r1 = new Thread(tm);
+
+        //r1.suspend();
+
+
         Dimension d = new Dimension(GameController.WIDTH, GameController.HEIGHT);
         setPreferredSize(d);
         setMinimumSize(d);
@@ -79,6 +93,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         if (STATE == GAME) {
             player.tick();
             level.tick();
+
         } else if (STATE == PAUSE_SCREEN) {
 
             if (isEnter) {
@@ -125,6 +140,7 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
         //g.fillRect(0, 0, GameController.WIDTH, GameController.HEIGHT);
         if(STATE == GAME) {
             player.render(g);
+
             level.render(g);
         } else if(STATE == PAUSE_SCREEN){
             //screen = new SpriteSheetModel("res/load/load.jpg");
