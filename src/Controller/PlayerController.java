@@ -72,14 +72,9 @@ public class PlayerController extends Rectangle {
         for(int i=0; i < GameController.level.enemies.size(); i++){
             EnemyController en = GameController.level.enemies.get(i);
             if(en.intersects(this)){
-<<<<<<< Updated upstream
-//                GameController.STATE = GameController.DIE_SCREEN;
-//                System.exit(1);
-=======
                 GameController.STATE = GameController.DIE_SCREEN;
                 new SaveScore("12:15:45");
 
->>>>>>> Stashed changes
             }
         }
 
