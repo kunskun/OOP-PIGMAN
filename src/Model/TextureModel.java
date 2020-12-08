@@ -16,9 +16,9 @@ public class TextureModel {
         spritesheetGround = new SpriteSheetModel("res/sprites/spritesheetGround.png");
 
 
-        loadScreen = new SpriteSheetModel("res/load/load.jpg");
-        losScreen = new SpriteSheetModel("res/load/los.png");
-        winScreen = new SpriteSheetModel("res/load/jok.png");
+        loadScreen = new SpriteSheetModel("res/load/load3.jpg");
+        losScreen = new SpriteSheetModel("res/load/los2.jpg");
+        winScreen = new SpriteSheetModel("res/load/win2.jpg");
         nextScreen = new SpriteSheetModel("res/load/jok.png");
 
 
