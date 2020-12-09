@@ -157,9 +157,9 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
             player.render(g);
             level.render(g);
             g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
-            g.setColor(new Color(1f,0f,0f,.8f ));
-            g.drawString(Integer.toString(player.point), 120, 25);
-            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
+            g.setColor(new Color(1f,1f,1f,1f ));
+//            g.drawString(Integer.toString(player.point), 120, 25);
+//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 20));
             g.drawString(tm.check(), 20, 25);
 
 
@@ -173,13 +173,15 @@ public class GameController extends Canvas implements Runnable, KeyListener, Mou
 //            g.drawString(tm.getLastTime(), 350, 245);
 //            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
 //            g.drawString(tm.getLastTime(), 340, 279);
+            tm.setZero();
+            tm.stopTime();
         } else if(STATE == WIN_SCREEN){
             //screen = new SetScreen("res/load/jok.png");
             g.drawImage(TextureModel.imgWin, 0, 0, 640, 480, null);
+//            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
+//            g.drawString(new GetScore().getScore(), 340, 279);
             g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
-            g.drawString(new GetScore().getScore(), 350, 245);
-            g.setFont(new Font("FC SaveSpace Rounded", Font.BOLD, 24));
-            g.drawString(tm.getLastTime(), 340, 279);
+            g.drawString(tm.getLastTime(), 350, 250);
 
             //draw animation pig
             g.drawImage(TextureModel.playerLR[imageIndex%2], 280, 350, 100, 100, null);

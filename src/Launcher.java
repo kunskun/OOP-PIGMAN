@@ -1,7 +1,6 @@
 import Controller.GameController;
 import Model.GetScore;
 
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -27,8 +26,8 @@ public class Launcher {
 //        la.setHorizontalTextPosition(JLabel.RIGHT);
 
         f.setVisible(true);
-        GetScore s = new GetScore();
-        s.getScore();
+//        GetScore s = new GetScore();
+//        s.getScore();
 
         game.start();
     }

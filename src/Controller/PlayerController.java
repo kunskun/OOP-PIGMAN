@@ -68,18 +68,21 @@ public class PlayerController extends Rectangle {
         if(level.apples.size() == 0){
             //Game end when you eat all apple is
             // count is use for change level
+//            new SaveScore(tm.getLastTime());
             if (GameController.count == 0) {
                 soundBG.stop();
                 new soundModel("res/sound/win.wav", false).start();
                 GameController.count++;
                 System.out.println(GameController.count);
                 GameController.STATE = GameController.LEVEL_PASSED;
+//                new SaveScore(tm.getLastTime());
                 return;
             }
             else{
                 soundBG.stop();
                 new soundModel("res/sound/win.wav", false).start();
                 GameController.STATE = GameController.WIN_SCREEN;
+//                new SaveScore(tm.getLastTime());
                 return;
             }
 //            GameController.player = new PlayerController(0, 0);

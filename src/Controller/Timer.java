@@ -11,9 +11,10 @@ import java.util.logging.Logger;
 public class Timer extends JLabel implements Runnable{
     public static int sec = 0;
     public String time;
+    public boolean isrun = true;
     @Override
     public synchronized void run() {
-        while (true) {
+        while (isrun) {
             try {
                 Thread.sleep(1000);
                 System.out.println(check());
@@ -26,6 +27,9 @@ public class Timer extends JLabel implements Runnable{
 
     public void setZero(){
         sec = -1;
+    }
+    public void stopTime(){
+        isrun = false;
     }
 
     public String check() {
