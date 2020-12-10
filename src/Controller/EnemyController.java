@@ -12,14 +12,13 @@ public class EnemyController extends Rectangle {
     private int state = random;
     private int right = 0, left = 1, up = 2, down = 3;
     private int dir = -1;
-    public Random randomGen;
+    private Random randomGen;
     private int time = 0;
     private int targetTime = 60*3;
     private int spd = 2;
     private int lastDir = -1;
 
     private int dirMove = 0;
-
 
     private int timeMove, targetTimeMove = 10;
     public  int imageIndex = 0;
@@ -120,13 +119,11 @@ public class EnemyController extends Rectangle {
                 time = 0;
             }
         } else if(state == find_path){
-
             if(lastDir == right){
                 if(y < GameController.player.y){
                     if(canMove(x, y+spd)){
                         y += spd;
                         state = smart;
-
                     }
                 } else {
                     if(canMove(x, y-spd)){
@@ -218,7 +215,6 @@ public class EnemyController extends Rectangle {
                 }
             }
         }
-
         return true;
     }
 

@@ -1,9 +1,8 @@
 package Controller;
 
 import Model.AppleModel;
-import Model.GlassModel;
+import Model.GrassModel;
 import Model.TileModel;
-
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -13,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.imageio.ImageIO;
 
-import static Controller.GameController.r1;
-
 public class LevelController {
     public int width;
     public int height;
@@ -22,16 +19,14 @@ public class LevelController {
 
     public List<AppleModel> apples;
     public List<EnemyController> enemies;
-    public List<GlassModel> glass;
+    public List<GrassModel> glass;
 
     public LevelController(String path) {
-
         apples = new ArrayList<>();
         enemies = new ArrayList<>();
         glass = new ArrayList<>();
         try{
             //BufferedImage map = ImageIO.read(getClass().getResource("../res/map/map.png"));
-
             BufferedImage map =  ImageIO.read(new File(path));
             //ImageIO.write(map, "png", new File("map.png"));
             this.width = map.getWidth();
@@ -39,12 +34,10 @@ public class LevelController {
             int[] pixels = new int[width*height];
             tiles = new TileModel[width][height];
             map.getRGB(0, 0, width, height, pixels, 0, width);
-
             for(int xx=0; xx < width; xx++){
                 for(int yy=0; yy < height; yy++){
                     int val = pixels[xx+(yy*width)];
                     System.out.println(val);
-
                     if(val == 0xFF000000){
                         //Tile
                         tiles[xx][yy] = new TileModel(xx*32, yy*32);
@@ -61,7 +54,7 @@ public class LevelController {
                     }
                     else {
                         apples.add(new AppleModel(xx*32, yy*32));
-                        glass.add(new GlassModel(xx*32, yy*32));
+                        glass.add(new GrassModel(xx*32, yy*32));
                     }
                 }
             }

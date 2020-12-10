@@ -15,19 +15,15 @@ public class TextureModel {
         spritesheetTiger = new SpriteSheetModel("res/sprites/spritesheetTiger.png");
         spritesheetGround = new SpriteSheetModel("res/sprites/spritesheetGround.png");
 
-
         loadScreen = new SpriteSheetModel("res/load/load3.jpg");
         losScreen = new SpriteSheetModel("res/load/los3.png");
         winScreen = new SpriteSheetModel("res/load/win5.jpg");
         nextScreen = new SpriteSheetModel("res/load/next.jpg");
 
-
-
         playerLR = new BufferedImage[2];
         playerUD = new BufferedImage[2];
         tigerLR = new BufferedImage[2];
         tigerUD = new BufferedImage[2];
-
 
         //right & left
         playerLR[0] = spritesheetAnimal.getSprite(0, 0, 16, 16);
@@ -53,7 +49,6 @@ public class TextureModel {
         imgLos = losScreen.getSprite(0, 0, 640, 480);
         imgWin = winScreen.getSprite(0, 0, 640, 480);
         imgNext = nextScreen.getSprite(0,0,640,480);
-
 
     }
 }

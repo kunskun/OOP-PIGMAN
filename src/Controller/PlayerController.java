@@ -4,14 +4,12 @@ import Model.SaveScore;
 import Model.TextureModel;
 import Model.soundModel;
 
-
 import java.awt.*;
-
-import static Controller.GameController.*;
 
 public class PlayerController extends Rectangle {
     private static final long serialVersionUID = 1L;
     public int point=0;
+    public static GameController g;
 
     public boolean right, left, up, down;
     private int speed = 4;
@@ -23,15 +21,15 @@ public class PlayerController extends Rectangle {
     private int lastDir = 1;
 
     public PlayerController(int x, int y){
-        if (begin) {
-            begin = false;
-            r1.start();
+        if (g.begin) {
+            g.begin = false;
+            g.r1.start();
         } else {
-            r1.resume();
+            g.r1.resume();
         }
 
         //r1.resume();
-        soundBG.start();
+        g.soundBG.start();
         setBounds(x, y, 32, 32);
     }
 
@@ -64,13 +62,12 @@ public class PlayerController extends Rectangle {
             }
         }
 
-
         if(level.apples.size() == 0){
             //Game end when you eat all apple is
             // count is use for change level
 //            new SaveScore(tm.getLastTime());
             if (GameController.count == 0) {
-                soundBG.stop();
+                g.soundBG.stop();
                 new soundModel("res/sound/win.wav", false).start();
                 GameController.count++;
                 System.out.println(GameController.count);
@@ -79,9 +76,11 @@ public class PlayerController extends Rectangle {
                 return;
             }
             else{
-                soundBG.stop();
+                g.soundBG.stop();
+                g.yourTime = g.tm.getLastTime();
                 new soundModel("res/sound/win.wav", false).start();
                 GameController.STATE = GameController.WIN_SCREEN;
+
 //                new SaveScore(tm.getLastTime());
                 return;
             }
@@ -93,14 +92,14 @@ public class PlayerController extends Rectangle {
         for(int i=0; i < GameController.level.enemies.size(); i++){
             EnemyController en = GameController.level.enemies.get(i);
             if(en.intersects(this)){
-                soundBG.stop();
-                r1.suspend();
+                g.soundBG.stop();
+                g.r1.suspend();
                 new soundModel("res/sound/lose.wav", false).start();
                 GameController.STATE = GameController.DIE_SCREEN;
                 //GameController.STATE = GameController.LEVEL_PASSED;
                 //GameController.STATE = GameController.WIN_SCREEN;
-                new SaveScore(tm.getLastTime());
-                tm.setZero();
+                new SaveScore(g.tm.getLastTime());
+                g.tm.setZero();
 
             }
         }
@@ -114,7 +113,6 @@ public class PlayerController extends Rectangle {
     }
 
     private boolean canMove(int nextx, int nexty){
-
         Rectangle bounds = new Rectangle(nextx, nexty, width, height);
         LevelController level = GameController.level;
 
@@ -132,7 +130,6 @@ public class PlayerController extends Rectangle {
     }
 
     public void render(Graphics g){
-
 //        g.setColor(Color.CYAN);
 //        g.fillRect(x, y, width, height);
         if (lastDir == 1) {

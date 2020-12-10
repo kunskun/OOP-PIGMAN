@@ -4,8 +4,8 @@ import Model.TextureModel;
 
 import java.awt.*;
 
-public class GlassModel extends Rectangle {
-    public GlassModel(int x, int y) {
+public class GrassModel extends Rectangle {
+    public GrassModel(int x, int y) {
         setBounds(x, y, 32, 32);
     }
 

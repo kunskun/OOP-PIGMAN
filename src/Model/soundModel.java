@@ -24,9 +24,6 @@ public class soundModel {
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
             }
 
-            // sleep to allow enough time for the clip to play
-            //Thread.sleep(500);
-
             stream.close();
 
         } catch (Exception ex) {
